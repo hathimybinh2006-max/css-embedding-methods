@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Cách Nhúng CSS Vào Trang Web</title>
+
+    <!-- PHẦN 3: EXTERNAL CSS (Liên kết file CSS bên ngoài) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PHẦN 2: INTERNAL CSS (CSS nội bộ trong thẻ <style>) -->
+    <style>
+        /* Định dạng cho Phần 2 bằng Internal CSS */
+        .internal-heading {
+            color: #d97706; /* Màu cam đậm */
+            font-size: 22px;
+        }
+
+        .internal-paragraph {
+            color: #b45309; /* Màu nâu cam */
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Định dạng khung bao quanh để trang web đẹp và rõ ràng */
+        .box {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #64748b;
+        }
+        .box-inline { border-left-color: #dc2626; }
+        .box-internal { border-left-color: #d97706; }
+        .box-external { border-left-color: #2563eb; }
+
+        .tag-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 12px;
+        }
+        .badge-inline { background-color: #dc2626; }
+        .badge-internal { background-color: #d97706; }
+        .badge-external { background-color: #2563eb; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">Luyện Tập 3 Cách Nhúng CSS Vào Trang Web</h1>
+
+        <!-- PHẦN 1: INLINE CSS -->
+        <div class="box box-inline">
+            <span class="tag-badge badge-inline">Cách 1: Inline Style</span>
+            <!-- Sử dụng thuộc tính style trực tiếp trong thẻ HTML -->
+            <h2 style="color: #dc2626; font-size: 22px;">Tiêu đề sử dụng Inline CSS (Màu Đỏ)</h2>
+            <p style="color: #991b1b; font-size: 16px; line-height: 1.6;">
+                Đây là đoạn văn bản được thay đổi màu sắc trực tiếp bằng thuộc tính <code>style="color: #991b1b;"</code> ngay trong thẻ &lt;p&gt;.
+            </p>
+        </div>
+
+        <!-- PHẦN 2: INTERNAL CSS -->
+        <div class="box box-internal">
+            <span class="tag-badge badge-internal">Cách 2: Internal Style</span>
+            <!-- Sử dụng class được định nghĩa trong thẻ <style> ở phần <head> -->
+            <h2 class="internal-heading">Tiêu đề sử dụng Internal CSS (Màu Cam)</h2>
+            <p class="internal-paragraph">
+                Đây là đoạn văn bản được thay đổi màu sắc thông qua thẻ <code>&lt;style&gt;</code> đặt trong phần <code>&lt;head&gt;</code> của tài liệu HTML.
+            </p>
+        </div>
+
+        <!-- PHẦN 3: EXTERNAL CSS -->
+        <div class="box box-external">
+            <span class="tag-badge badge-external">Cách 3: External Style</span>
+            <!-- Sử dụng class được định nghĩa trong file style.css riêng biệt -->
+            <h2 class="external-heading">Tiêu đề sử dụng External CSS (Màu Xanh Dương)</h2>
+            <p class="external-paragraph">
+                Đây là đoạn văn bản được thay đổi màu sắc thông qua tệp tin CSS độc lập bên ngoài (<code>style.css</code>) liên kết bằng thẻ <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
